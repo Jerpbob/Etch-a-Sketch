@@ -7,9 +7,11 @@ function createBox(num) {
     }
 }
 
-const button = document.querySelector("buttons");
+
+const button = document.querySelector(".buttons");
 button.addEventListener('click', function (e) {
-    console.log(e.target.id);
+    document.querySelector(".container").innerHTML = ''
+    const num = e.target.id * e.target.id
+    createBox(num);
 });
 
-createBox((16 * 16));
