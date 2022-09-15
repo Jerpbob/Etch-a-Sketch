@@ -9,6 +9,8 @@ function createBox(num) {
     }
 }
 
+// modifies the .container class by changing the grid-template-rows
+// and columns by changing the amount of repeats
 function numOfRowsColumns(num) {
     const container = document.querySelector(".container");
     container.style.gridTemplateRows = `repeat(${num}, auto)`;
@@ -19,12 +21,14 @@ function numOfRowsColumns(num) {
 // so the content is not blank
 createBox(16 * 16);
 
-const button = document.querySelector(".buttons");
-button.addEventListener('click', function (e) {
-    document.querySelector(".container").innerHTML = '';
-    const num = e.target.id * e.target.id;
-    createBox(num);
-    numOfRowsColumns(e.target.id);
+const button = document.querySelectorAll("button");
+button.forEach(button => {
+    button.addEventListener('click', function (e) {
+        document.querySelector(".container").innerHTML = '';
+        const num = e.target.id * e.target.id;
+        createBox(num);
+        numOfRowsColumns(e.target.id);
+    })
 });
 
 
