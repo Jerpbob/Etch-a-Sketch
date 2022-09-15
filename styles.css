@@ -75,6 +75,7 @@ section {
 
 .box {
     border-style: solid;
+    border-width: 1px;
 }
 
 .box:hover {
