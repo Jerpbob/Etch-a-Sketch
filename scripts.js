@@ -9,15 +9,22 @@ function createBox(num) {
     }
 }
 
+function numOfRowsColumns(num) {
+    const container = document.querySelector(".container");
+    container.style.gridTemplateRows = `repeat(${num}, auto)`;
+    container.style.gridTemplateColumns = `repeat(${num}, auto)`;
+}
+
 // This function exists to create a default set up,
 // so the content is not blank
 createBox(16 * 16);
 
 const button = document.querySelector(".buttons");
 button.addEventListener('click', function (e) {
-    document.querySelector(".container").innerHTML = ''
-    const num = e.target.id * e.target.id
+    document.querySelector(".container").innerHTML = '';
+    const num = e.target.id * e.target.id;
     createBox(num);
+    numOfRowsColumns(e.target.id);
 });
 
 
