@@ -31,5 +31,7 @@ button.forEach(button => {
     })
 });
 
-
-
+const container = document.querySelector(".container");
+container.addEventListener('pointerover', function (e) {
+    e.target.style.backgroundColor = 'red';
+});

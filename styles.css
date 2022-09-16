@@ -56,7 +56,7 @@ button:active {
     display: flex;
 }
 
-section {
+.canvas {
     width: 70%;
     margin: 30px;
     border-style: solid;
