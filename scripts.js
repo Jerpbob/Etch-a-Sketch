@@ -35,3 +35,16 @@ const container = document.querySelector(".container");
 container.addEventListener('pointerover', function (e) {
     e.target.style.backgroundColor = 'red';
 });
+
+const pencilSize = document.getElementById("pencil-size-definer");
+pencilSize.addEventListener("input", function (e) {
+    console.log(e.target.value);
+    document.getElementById("pencil").style.height = `${e.target.value}px`;
+});
+
+const eraserSize = document.getElementById("eraser-size-definer");
+eraserSize.addEventListener("input", function (e) {
+    console.log(e.target.value);
+    document.getElementById("eraser").style.height = `${e.target.value}px`;
+    document.getElementById("eraser").style.width = `${e.target.value}px`;
+});
