@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1><span>G</span>uess that sc<span>RIBBLE</span></h1>
+        <h1><span>G</span>iant sc<span>RIBBLE</span>s</h1>
         <div class="buttons">
             <button id="2">2x</button>
             <button id="8">8x</button>
@@ -27,13 +27,17 @@
         <section class="tools">
             <div class="tool-container">
                 The Pencil
-                <div id="pencil"></div>
-                <input type="number" name="pencil-size" id="pencil-size-definer">
+                <div id="pencil">
+                    <div id="body" style="height: 90%;"></div>
+                    <div id="clickablePart" style="height: 10%;"></div>
+                </div>
+                <input type="number" name="pencil-size" id="pencil-size-definer" min="1" placeholder="length"
+                    value="100">
             </div>
             <div class="tool-container">
                 The Eraser
                 <div id="eraser"></div>
-                <input type="number" name="eraser-size" id="eraser-size-definer">
+                <input type="number" name="eraser-size" id="eraser-size-definer" min="1" placeholder="size" value="40">
             </div>
         </section>
     </div>
