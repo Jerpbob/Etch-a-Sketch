@@ -115,6 +115,10 @@ button:active {
     position: absolute;
 }
 
+#eraser:hover {
+    cursor: cell;
+}
+
 #clickablePart:hover {
     cursor: cell;
 }
