@@ -82,3 +82,32 @@ button:active {
 .box:hover {
     background-color: lightgray;
 }
+
+.tool-container {
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 130px;
+}
+
+
+#pencil {
+    background-color: black;
+    height: 100px;
+    width: 10px;
+    border-style: solid;
+    border-end-end-radius: 100px;
+    transform: translateX(70px) rotate(45deg);
+    position: absolute;
+}
+
+#eraser {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border-style: solid;
+    transform: translateX(70px) rotate(45deg);
+    position: absolute;
+}
